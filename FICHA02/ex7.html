@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FICHA 02 - exercício 7</title>
+</head>
+<body>
+    <script>
+        let word = prompt("Digite uma palavra?")
+        word = word.toLowerCase();
+        let count = 0
+        for (let i = 0; i < word.length; i++) {
+            if (word[i]=== "a" || word[i]=== "e" || word[i]=== "i" || word[i]=== "o" || word[i]=== "u") {
+                count = count + 1
+            }
+        }        
+
+        console.log(`A string tem ${count} vogais.`);
+        
+
+
+    </script>
+</body>
+</html>

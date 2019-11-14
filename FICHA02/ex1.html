@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FICHA 02</title>
+</head>
+<body>
+    <script>
+        let word1 = prompt("Digite a primeira palavra?")
+        let word2 = prompt("Digite a segunda palavra?")
+        let lenWord1 = word1.length
+        let lenWord2 = word2.length
+        
+        if (lenWord1 > lenWord2) {
+            console.log(word1);            
+        } else if(lenWord1 < lenWord2) {
+            console.log(word2);
+        } else {
+            console.log("Ambas as strings têm o mesmo tamanho!");
+        }
+    </script>
+</body>
+</html>

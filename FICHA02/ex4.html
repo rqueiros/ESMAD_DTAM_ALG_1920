@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FICHA 02 - exercício 4</title>
+</head>
+<body>
+    <script>
+        let fullName = prompt("Digite o seu primeiro e último nome?")
+
+        // usando o método indexOf
+        let firstName = fullName.slice(0, fullName.indexOf(" "))
+        let lastName = fullName.slice(fullName.indexOf(" ") + 1)
+        console.log(`${lastName}, ${firstName}`);
+
+        // usando o método split
+        let names = fullName.split(" ")
+        console.log(`${names[1]}, ${names[0]}`);
+        
+        // Abordagem mais abrangente (dá para todos os tamanhos)
+        //console.log(`${names[names.length - 1]}, ${names[0]}`);
+
+        
+
+
+    </script>
+</body>
+</html>

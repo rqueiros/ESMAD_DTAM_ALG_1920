@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FICHA 02 - exercício 7</title>
+</head>
+<body>
+    <script>
+        let word = prompt("Digite uma palavra?")
+        let character = prompt("Digite um caracter?")
+        
+        word = word.toLowerCase()
+        character = character.toLowerCase()
+
+        let count = 0
+        for (let i = 0; i < word.length; i++) {
+            if (word[i]===character) {
+                count = count + 1
+            }
+        }        
+
+        console.log(`A string tem ${count} ocorrências de ${character}.`);
+        
+
+
+    </script>
+</body>
+</html>
