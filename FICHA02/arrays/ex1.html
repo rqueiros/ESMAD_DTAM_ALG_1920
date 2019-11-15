@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>F02 // Arrays // Ex1</title>
+</head>
+
+<body>
+    <script>
+        const countries = ["Portugal", "Espanha", "Ingla", "Angola", "França"]
+
+        // i)
+        console.log(countries.length)
+
+        // ii)
+        countries.push("Itália")
+
+        // iii)
+        countries[2] = "Inglaterra"
+
+        // iv)
+        countries.splice(3, 1)
+
+        // v)
+        for (let i = 0; i < countries.length; i++) {
+            console.log(countries[i])
+        }
+
+        // vi)
+        for (let i = 0; i < countries.length; i++) {
+            const country = countries[i]
+            if (country.endsWith('a')) {
+                console.log(country)
+            }
+        }
+
+        // vii)
+        const sortedCountries = countries.sort() // Cuidado: irá alterar também o array countries
+
+        // Alternativa imutável utilizando spread operator (ler https://medium.com/@nitish15p/immutable-object-and-array-operations-in-javascript-86047609532)
+        const safeSortedCountries = [...countries].sort() // Não altera o array countries
+
+        const fruits = ["a"]
+        const fruits2 = ["b"]
+        const fruits3 = [...fruits, ...fruits2]
+    </script>
+</body>
+
+</html>
