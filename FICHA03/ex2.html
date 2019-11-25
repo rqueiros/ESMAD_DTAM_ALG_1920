@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ficha 03 - exercício 02</title>
+</head>
+
+<body>
+    <script>
+        const student = {
+            name: "David Silva",
+            course: "POO",
+            grade: 12
+        }
+
+        listObjectNames()
+        removePropGrade()
+        listObjectNames()
+        calcObjectSize()
+        //b)
+        function listObjectNames() {
+            for (const key in student) {
+                console.log(key)
+            }
+        }
+        //c)
+        function removePropGrade() {
+            delete student.grade
+        }
+        //d) 
+        function calcObjectSize() {
+            let count = 0
+            for (const key in student) {
+                count++
+            }
+            console.log(count)
+        }
+    </script>
+</body>
+
+</html>

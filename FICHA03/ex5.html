@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ficha 03 - exercício 05</title>
+</head>
+<body>
+    <script>
+        let menu = {
+            width: 200,
+            height: 300,
+            title: "My menu"
+        };
+        multiplyNumeric(menu)
+        function multiplyNumeric(menu) {
+            for (const key in menu) {
+                if(typeof(menu[key]) == "number") {
+                    menu[key] = menu[key] * 2
+                }
+            }
+            console.table(menu)
+        }
+    
+    </script>
+</body>
+</html>
