@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>F02 // Arrays // Ex3</title>
+</head>
+
+<body>
+    <script>
+        const numbers = [4, 5, 12, -3, 34]
+
+        // i)
+        let sum = 0
+        let mean = 0
+        for (let i = 0; i < numbers.length; i++) {
+            sum += numbers[i]
+            if (i === numbers.length - 1) {
+                mean = sum / numbers.length
+            }
+        }
+        console.log(sum)
+        console.log(mean)
+        // Alternative
+        // const sum = numbers.reduce((previousSum, number) => previousSum + number)
+        // const mean = sum / numbers.length
+
+        // ii)
+        let minNumber = 0
+        let maxNumber = 0
+        for (let i = 0; i < numbers.length; i++) {
+            if (i === 0) {
+                minNumber = numbers[i]
+                maxNumber = numbers[i]
+            }
+            else {
+                if (numbers[i] > maxNumber) maxNumber = numbers[i]
+                if (numbers[i] < minNumber) minNumber = numbers[i]
+            }
+        }
+        console.log(minNumber)
+        console.log(maxNumber)
+
+        // iii)
+        const negativeValues = []
+        for (let i = 0; i < numbers.length; i++) {
+            if (numbers[i] < 0) negativeValues.push(numbers[i])
+        }
+        console.log(negativeValues.length)
+
+        // iv)
+        const firstInput = prompt('Insira o 1º número')
+        const secondInput = prompt('Insira o 2º número')
+        let maxInputNumber
+        let minInputNumber
+        const range = []
+        if (firstInput > secondInput) {
+            maxInputNumber = firstInput
+            minInputNumber = secondInput
+        }
+        else {
+            maxInputNumber = secondInput
+            minInputNumber = firstInput
+        }
+        numbers.forEach(function (number) {
+            if (number >= minInputNumber && number <= maxInputNumber) range.push(number)
+        })
+        console.log(range)
+    </script>
+</body>
+
+</html>

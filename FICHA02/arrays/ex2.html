@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>F02 // Arrays // Ex2</title>
+</head>
+
+<body>
+    <script>
+        let exit = false
+        const inputs = []
+        while (exit === false) {
+            const input = prompt('Insira um texto')
+            if (input === 'sair') {
+                exit = true
+                break;
+            }
+            inputs.push(input)
+        }
+        console.log(inputs)
+    </script>
+</body>
+
+</html>
