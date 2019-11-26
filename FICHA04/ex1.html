@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ficha de Revisão - Exercício 01</title>
+</head>
+
+<body>
+    <script>
+
+        calcIMC()
+
+        function calcIMC() {
+            const weight = +prompt("Digite o seu peso?")
+            const height = +prompt("Digite a sua altura?")
+            let response
+
+            const imc = weight / (height*height)
+
+            if(imc < 18.5) {
+                response = "Baixo peso"
+            } else if(imc >= 18.5 && imc <= 24.9) {
+                response = "Peso normal"
+            } else if(imc >= 25 && imc <= 29.9) {
+                response = "Pré-obesidade"
+            } else if(imc >= 30 && imc <= 34.9) {
+                response = "Obesidade Grau I"
+            } else if(imc >= 35 && imc <= 39.9) {
+                response = "Obesidade Grau II"
+            } else {
+                response = "Obesidade Grau III"
+            }
+
+            alert(`RESULTADO: ${response}`)
+        }
+
+
+
+    </script>
+</body>
+
+</html>

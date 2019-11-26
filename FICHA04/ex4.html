@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ficha de Revisão - Exercício 04</title>
+</head>
+
+<body>
+    <script>
+
+        const person = {
+            name: "rui",
+            countries: ["espanha", "frança", "italia"],
+        }
+
+        const person2 = {
+            name: "maria",
+            countries: ["inglaterra", "espanha"],
+        }
+
+        getCommonCountries()
+
+        function getCommonCountries() {
+            let commonCountries = []
+            for (const country of person.countries) {
+                if (person2.countries.includes(country)) {
+                    commonCountries.push(country)
+                }
+            }
+            console.log(`Países comuns: ${commonCountries}`);
+        }
+
+    </script>
+</body>
+
+</html>

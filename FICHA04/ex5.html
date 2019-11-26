@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ficha de Revisão - Exercício 05</title>
+</head>
+
+<body>
+    <script>
+        // Alínea a
+        const movies = [
+            {
+                title: "Os condenados de Shawshank",
+                genre: "drama",
+                duration: 142
+            },
+            {
+                title: "Memento",
+                genre: "thriller",
+                duration: 113
+            },
+            {
+                title: "Seven",
+                genre: "thriller",
+                duration: 127
+            }
+        ]
+
+        // Alínea b
+        //getMoviesByGenre('thriller')
+
+        function getMoviesByGenre(genre) {
+            let moviesByGenre = []
+            for (const movie of movies) {
+                if (movie.genre === genre) {
+                    moviesByGenre.push(movie.title)
+                }
+            }
+            console.log(`Filmes do género ${genre}: ${moviesByGenre}`);
+        }
+
+        // Alínea c
+        calcDurationByLetter('m')
+
+        function calcDurationByLetter(letter) {
+            let totalDuration = 0, countDuration = 0
+            for (const movie of movies) {
+                if (movie.title.toLowerCase().startsWith(letter.toLowerCase())) {
+                    totalDuration += movie.duration
+                    countDuration++
+                }
+            }
+            if (totalDuration) {
+                console.log(`
+                    Duração total de filmes iniciados pela letra ${letter}: ${totalDuration}
+                    Média de duração de filmes iniciados pela letra ${letter}: ${totalDuration/countDuration}
+            `);    
+            } else {
+                console.log(`Sem filmes iniciados pela letra ${letter}`);
+                
+            }
+            
+        }
+
+    </script>
+</body>
+
+</html>

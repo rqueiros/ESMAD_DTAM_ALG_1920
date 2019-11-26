@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ficha de Revisão - Exercício 03</title>
+</head>
+
+<body>
+    <script>
+
+        reverseSentence2()
+
+        function reverseSentence() {
+            const sentence = prompt("Digite uma frase?")
+            const words = sentence.split(' ')
+            let reverseSentence = ""
+            
+            for (let i = words.length-1; i >=0; i--) {
+                reverseSentence += `${words[i]} `;
+                
+            }
+            console.log(`Frase invertida: ${reverseSentence}`);
+        }
+
+        //Alternativa
+        function reverseSentence2() {
+            const sentence = prompt("Digite uma frase?")
+            const reverseSentence = sentence.split(' ').reverse().join(' ')            
+            console.log(`Frase invertida: ${reverseSentence}`);
+        }
+
+
+    </script>
+</body>
+
+</html>
