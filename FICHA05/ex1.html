@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Local Storage App</title>
+</head>
+
+<body>
+    Nome: <input id="txtName" type="text"><br>
+    Score: <input id="txtScore" type="number"><br>
+    <input id="btnSave" type="button" value="GUARDAR">
+    <input id="btnSort" type="button" value="ORDENAR">
+
+
+    <div id="divTable">
+
+    </div>
+
+    <script>
+        // Alimentar a variável scores da local storage ou, caso não exista, inicia-se vazia
+        let scores
+        if (localStorage.getItem("ranking")) {
+            scores = JSON.parse(localStorage.getItem("ranking"))
+        } else {
+            scores = []
+        }
+
+        // Botão GUARDAR
+        document.querySelector("#btnSave").addEventListener("click",
+            function () {
+                const txtName = document.querySelector("#txtName").value
+                const txtScore = document.querySelector("#txtScore").value
+
+                // construir objeto
+                const obj = { name: txtName, score: txtScore }
+                scores.push(obj)
+
+                localStorage.setItem("ranking", JSON.stringify(scores))
+
+                // Chamar a função show
+                show()
+            }
+        )
+
+        // Botão ORDENAR
+        document.querySelector("#btnSort").addEventListener("click",
+            function () {
+                scores.sort(function (s1, s2) {
+                    if (s1.score > s2.score) return -1
+                    if (s1.score < s2.score) return 1
+                    else return 0
+                })
+                // Chamar a função show
+                show()
+            }
+        )
+
+        // Mostrar ranking
+        function show() {
+            // Criar uma tabela
+            let table = "<table>"
+            for (const score of scores) {
+                table += `
+                    <tr>
+                        <td>${score.name}</td>
+                        <td>${score.score}</td>                        
+                    </tr>
+                `
+            }
+            table += "</table>"
+
+            // Injetar tabela no contentor
+            document.querySelector("#divTable").innerHTML = table
+
+        }
+
+
+
+    </script>
+
+
+</body>
+
+</html>
